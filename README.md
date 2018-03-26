@@ -1,4 +1,4 @@
-# Financial-Accounting-Formulas-Library
+# Financial-Formulas
 
 A collection of methods for solving Finance/Accounting equations.
 
