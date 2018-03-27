@@ -4,7 +4,7 @@ A collection of methods for solving Finance/Accounting equations.
 
 ## Getting Started
 
-1. Import this library.
+1. Import this library:
 ```java
 import srbrettle.financialformulas.FinancialFormulas;
 ```
