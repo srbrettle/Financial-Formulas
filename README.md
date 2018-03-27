@@ -2,6 +2,27 @@
 
 A collection of methods for solving Finance/Accounting equations.
 
+## Getting Started
+
+1. Import this library.
+```java
+import srbrettle.financialformulas.FinancialFormulas;
+```
+2. Create an instance of the class: 
+```java
+FinancialFormulas calc = new FinancialFormulas();
+```
+3. Use the library methods:
+```java
+double result = calc.CalcPriceSalesRatio(500,200);
+```
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](/LICENSE) file for details.
+
+## Formulas / Equations included
+
 * Asset Turnover
 * Assets
 * Average Collection Period
