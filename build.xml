@@ -6,7 +6,9 @@
     <property name="dir.jar"     value="${dir.build}/jar"/>
     <property name="dir.testclasses" value="${dir.build}/test-classes"/>
     <property name="dir.testresults"     value="${dir.build}/test-results"/>
-    
+    <property name="dir.lib" value="lib"/>
+    <property name="junit.file" value="${dir.lib}/junit-4.12.jar"/>
+    <property name="hamcrest.file" value="${dir.lib}/hamcrest-core-1.3.jar"/>
 
     <property name="main-class"  value="srbrettle.financialformulas.FinancialFormulas"/>
 
@@ -24,7 +26,8 @@
         <javac srcdir="${dir.test}" destdir="${dir.testclasses}">
             <classpath>
                 <pathelement location="${dir.classes}"/>
-                <pathelement location="lib/junit-4.12.jar"/>
+                <pathelement location="${junit.file}"/>
+                <pathelement location="${hamcrest.file}"/>
             </classpath>
         </javac>
 
@@ -32,7 +35,8 @@
         <junit haltonfailure="no" printsummary="on">
             <classpath >
                 <pathelement location="${dir.classes}"/>
-                <pathelement location="lib/junit-4.12.jar"/>
+                <pathelement location="${junit.file}"/>
+                <pathelement location="${hamcrest.file}"/>
                 <pathelement location="${dir.testclasses}"/>
             </classpath>
             <formatter type="brief" usefile="false"/>
