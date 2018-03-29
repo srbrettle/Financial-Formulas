@@ -1,10 +1,10 @@
-# Financial-Formulas
+# Financial-Formulas [![Build Status](https://travis-ci.org/srbrettle/Financial-Formulas.svg?branch=master)](https://travis-ci.org/srbrettle/Financial-Formulas) [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dwyl/esta/issues)
 
 A collection of methods for solving Finance/Accounting equations.
 
 ## Getting Started
 
-1. Import this library:
+1. Download and import [this](/main/java/) library into your project:
 ```java
 import srbrettle.financialformulas.FinancialFormulas;
 ```
