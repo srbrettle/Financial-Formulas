@@ -5,3 +5,4 @@ jdk:
   - openjdk7
 
 script: ant main
+script: ant test
