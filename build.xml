@@ -1,8 +1,12 @@
 <project name="FinancialFormulas" basedir="." default="main">
     <property name="dir.src"     value="main/java/"/>
+    <property name="dir.test"     value="test/java/"/>
     <property name="dir.build"   value="build"/>
     <property name="dir.classes" value="${dir.build}/classes"/>
     <property name="dir.jar"     value="${dir.build}/jar"/>
+    <property name="dir.testclasses" value="${dir.build}/test-classes"/>
+    <property name="dir.testresults"     value="${dir.build}/test-results"/>
+    
 
     <property name="main-class"  value="srbrettle.financialformulas.FinancialFormulas"/>
 
@@ -13,6 +17,30 @@
     <target name="compile">
         <mkdir dir="${dir.classes}"/>
         <javac srcdir="${dir.src}" destdir="${dir.classes}"/>
+    </target>
+    
+    <target name="test" depends="compile">
+        <mkdir dir="${dir.testclasses}"/>
+        <javac srcdir="${dir.test}" destdir="${dir.testclasses}">
+            <classpath>
+                <pathelement location="${dir.classes}"/>
+                <pathelement location="lib/junit-4.12.jar"/>
+            </classpath>
+        </javac>
+
+        <mkdir dir="${dir.testresults}"/>
+        <junit haltonfailure="no" printsummary="on">
+            <classpath >
+                <pathelement location="${dir.classes}"/>
+                <pathelement location="lib/junit-4.12.jar"/>
+                <pathelement location="${dir.testclasses}"/>
+            </classpath>
+            <formatter type="brief" usefile="false"/>
+            <formatter type="xml" />
+            <batchtest todir="${dir.testresults}" >
+                <fileset dir="${dir.testclasses}" includes="**/*Test.class"/>
+            </batchtest>
+        </junit>
     </target>
 
     <target name="jar" depends="compile">
