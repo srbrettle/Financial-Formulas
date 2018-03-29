@@ -8,7 +8,7 @@
     <property name="dir.testresults"     value="${dir.build}/test-results"/>
     <property name="dir.lib" value="lib"/>
     <property name="junit.file" value="${dir.lib}/junit-4.12.jar"/>
-    <property name="hamcrest.file" value="${dir.lib}/hamcrest-core-1.3.jar"/>
+    <property name="hamcrest.file" value="${dir.lib}/hamcrest-all-1.3.jar"/>
 
     <property name="main-class"  value="srbrettle.financialformulas.FinancialFormulas"/>
 
