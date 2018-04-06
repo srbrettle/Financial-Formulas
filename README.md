@@ -1,8 +1,8 @@
-# Financial-Formulas [![Build Status](https://travis-ci.org/srbrettle/Financial-Formulas.svg?branch=master)](https://travis-ci.org/srbrettle/Financial-Formulas) [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dwyl/esta/issues)
+# Financial-Formulas [![Build Status](https://travis-ci.org/srbrettle/Financial-Formulas.svg?branch=master)](https://travis-ci.org/srbrettle/Financial-Formulas) [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/srbrettle/Financial-Formulas/issues)
 
 A collection of methods for solving Finance/Accounting equations.
 
-## Getting Started
+## Getting Started - Java
 
 1. Download and import [this](/main/java/) library into your project:
 ```java
@@ -16,6 +16,22 @@ FinancialFormulas calc = new FinancialFormulas();
 ```java
 double result = calc.CalcPriceSalesRatio(500,200);
 ```
+
+## Getting Started - C#
+
+1. Download and import [this](/main/csharp/) library into your project:
+```c#
+using srbrettle.financialformulas.FinancialFormulas;
+```
+2. Create an instance of the class: 
+```c#
+var calc = new FinancialFormulas();
+```
+3. Use the library methods:
+```c#
+double result = calc.CalcPriceSalesRatio(500,200);
+```
+
 
 ## License
 
