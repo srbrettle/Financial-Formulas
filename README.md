@@ -32,6 +32,19 @@ var calc = new FinancialFormulas();
 double result = calc.CalcPriceSalesRatio(500,200);
 ```
 
+## Getting Started - Python
+
+Note that the mothod and variable names have been changed to meet PEP 8 guidelines.
+
+1. Download and import [this](/main/python/) library into your project:
+```python
+import srbrettle.financialformulas.FinancialFormulas as calc
+```
+2. Use the library methods:
+```python
+assets = calc.calc_price_sales_ratio(500, 200)
+```
+
 
 ## License
 
