@@ -21,7 +21,7 @@ double result = calc.CalcPriceSalesRatio(500,200);
 
 ### Using NuGet [![NuGet](https://img.shields.io/badge/NuGet-1.0.0-blue.svg)](https://www.nuget.org/packages/FinancialFormulas/1.0.0)
 
-1. Install FinancialFormulas NuGet package (via "Manage Packages for Solution" or running the following in "Packet Manager Console".
+1. Within your project, install FinancialFormulas NuGet package (via "Manage Packages for Solution" or running the following in "Packet Manager Console".
 ```PowerShell
 Install-Package FinancialFormulas -Version 1.0.0
 ```
