@@ -17,9 +17,7 @@ matrix:
         - python FinancialFormulas.py
         
     - language: java
-      jdk:
-        - oraclejdk8
-        - openjdk7
+      jdk: oraclejdk8
 
       script: ant main
       script: ant test
