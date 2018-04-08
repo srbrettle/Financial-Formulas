@@ -19,6 +19,23 @@ double result = calc.CalcPriceSalesRatio(500,200);
 
 ## Getting Started - C#
 
+### Using NuGet [![NuGet](https://img.shields.io/badge/NuGet-1.0.0-blue.svg)](https://www.nuget.org/packages/FinancialFormulas/1.0.0)
+
+1. Install FinancialFormulas NuGet package (via "Manage Packages for Solution" or running the following in "Packet Manager Console".
+```PowerShell
+Install-Package FinancialFormulas -Version 1.0.0
+```
+2. Create an instance of the class: 
+```c#
+var calc = new FinancialFormulas.FinancialFormulas();
+```
+3. Use the library methods:
+```c#
+double result = calc.CalcPriceSalesRatio(500,200);
+```
+
+### Manually
+
 1. Download and import [this](/main/csharp/) library into your project:
 ```c#
 using srbrettle.financialformulas.FinancialFormulas;
