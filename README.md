@@ -19,11 +19,11 @@ double result = calc.CalcPriceSalesRatio(500,200);
 
 ## Getting Started - C#
 
-### Using NuGet [![NuGet](https://img.shields.io/badge/NuGet-1.0.0-blue.svg)](https://www.nuget.org/packages/FinancialFormulas/1.0.0)
+### Using NuGet [![NuGet](https://img.shields.io/badge/NuGet-1.0.1.1-blue.svg)](https://www.nuget.org/packages/FinancialFormulas/1.0.1.1)
 
 1. Within your project, install FinancialFormulas NuGet package (via "Manage Packages for Solution" or running the following in "Packet Manager Console".
 ```PowerShell
-Install-Package FinancialFormulas -Version 1.0.0
+Install-Package FinancialFormulas -Version 1.0.1.1
 ```
 2. Create an instance of the class: 
 ```c#
