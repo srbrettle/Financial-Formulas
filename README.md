@@ -1,6 +1,6 @@
 # Financial-Formulas [![Build Status](https://travis-ci.org/srbrettle/Financial-Formulas.svg?branch=master)](https://travis-ci.org/srbrettle/Financial-Formulas) [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/srbrettle/Financial-Formulas/issues)
 
-A collection of methods for solving Finance/Accounting equations.
+A collection of methods for solving Finance/Accounting equations, implemented in C#, Java and Python.
 
 ## Getting Started - Java
 
