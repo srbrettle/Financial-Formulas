@@ -2,6 +2,10 @@
 
 A collection of methods for solving Finance/Accounting equations, implemented in C#, Java and Python.
 
+## See in Action
+
+[Finance Calculator - Android Application](https://play.google.com/store/apps/details?id=barwick.financecalculator)
+
 ## Getting Started - Java
 
 1. Download and import [this](/main/java/) library into your project:
