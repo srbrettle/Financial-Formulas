@@ -1,6 +1,6 @@
 # Financial-Formulas [![Build Status](https://travis-ci.org/srbrettle/Financial-Formulas.svg?branch=master)](https://travis-ci.org/srbrettle/Financial-Formulas) [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/srbrettle/Financial-Formulas/issues)
 
-A collection of methods for solving Finance/Accounting equations, implemented in C#, Java and Python.
+A collection of methods for solving Finance/Accounting equations, implemented in C#, Java, Python and C++.
 
 ## See in Action
 
@@ -66,6 +66,10 @@ import srbrettle.financialformulas.FinancialFormulas as calc
 assets = calc.calc_price_sales_ratio(500, 200)
 ```
 
+## Getting Started - C++
+
+1. Download the [source code](/main/cplusplus/).
+2. Follow the instructions in [Walkthrough: Creating and Using a Static Library (C++)](https://docs.microsoft.com/en-gb/cpp/windows/walkthrough-creating-and-using-a-static-library-cpp)
 
 ## License
 
