@@ -23,34 +23,34 @@ double result = calc.CalcPriceSalesRatio(500,200);
 
 ## Getting Started - C#
 
-### Using NuGet [![NuGet](https://img.shields.io/badge/NuGet-1.0.1.1-blue.svg)](https://www.nuget.org/packages/FinancialFormulas/1.0.1.1)
+### Using NuGet [![NuGet](https://img.shields.io/badge/NuGet-1.0.2-blue.svg)](https://www.nuget.org/packages/FinancialFormulas/1.0.2)
 
 1. Within your project, install FinancialFormulas NuGet package (via "Manage Packages for Solution" or running the following in "Packet Manager Console".
 ```PowerShell
-Install-Package FinancialFormulas -Version 1.0.1.1
+Install-Package FinancialFormulas -Version 1.0.2
 ```
-2. Create an instance of the class: 
+2. Reference the Namespace:
 ```c#
-var calc = new FinancialFormulas.FinancialFormulas();
+using srbrettle.FinancialFormulas;
 ```
-3. Use the library methods:
+3. Use the static library methods:
 ```c#
-double result = calc.CalcPriceSalesRatio(500,200);
+double result = FinancialFormulas.CalcPriceSalesRatio(500,200);
 ```
 
 ### Manually
 
 1. Download and import [this](/main/csharp/) library into your project:
 ```c#
-using srbrettle.financialformulas.FinancialFormulas;
+using srbrettle.FinancialFormulas;
 ```
-2. Create an instance of the class: 
+2. Reference the Namespace:
 ```c#
-var calc = new FinancialFormulas();
+using srbrettle.FinancialFormulas;
 ```
-3. Use the library methods:
+3. Use the static library methods:
 ```c#
-double result = calc.CalcPriceSalesRatio(500,200);
+double result = FinancialFormulas.CalcPriceSalesRatio(500,200);
 ```
 
 ## Getting Started - Python
