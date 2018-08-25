@@ -2,7 +2,7 @@ package srbrettle.financialformulas;
 
 /**
  * A collection of methods for solving Finance/Accounting equations.
- * 
+ *
  * @author      Scott Brettle
  */
 public class FinancialFormulas
@@ -19,7 +19,7 @@ public class FinancialFormulas
      * @param totalAssets Total Assets
      * @return
      */
-    public double CalcAssetTurnover(double netSales, double totalAssets)
+    public static double CalcAssetTurnover(double netSales, double totalAssets)
     {
         return netSales / totalAssets;
     }
@@ -30,7 +30,7 @@ public class FinancialFormulas
      * @param annualCreditSales Annual Credit Sales
      * @return
      */
-    public double CalcAverageCollectionPeriod(double accountsReceivable, double annualCreditSales)
+    public static double CalcAverageCollectionPeriod(double accountsReceivable, double annualCreditSales)
     {
         return accountsReceivable / (annualCreditSales / 365);
     }
@@ -42,7 +42,7 @@ public class FinancialFormulas
      * @param payablesConversionPeriod Payables Conversion Period
      * @return
      */
-    public double CalcCashConversionCycle(double inventoryConversionPeriod, double receivablesConversionPeriod, double payablesConversionPeriod)
+    public static double CalcCashConversionCycle(double inventoryConversionPeriod, double receivablesConversionPeriod, double payablesConversionPeriod)
     {
         return (inventoryConversionPeriod
                 + receivablesConversionPeriod - payablesConversionPeriod);
@@ -53,7 +53,7 @@ public class FinancialFormulas
      * @param inventoryTurnoverRatio Inventory Turnover Ratio
      * @return
      */
-    public double CalcInventoryConversionPeriod(double inventoryTurnoverRatio)
+    public static double CalcInventoryConversionPeriod(double inventoryTurnoverRatio)
     {
         return 365 / inventoryTurnoverRatio;
     }
@@ -64,7 +64,7 @@ public class FinancialFormulas
      * @param costOfGoodsSold Cost Of Goods Sold
      * @return
      */
-    public double CalcInventoryConversionRatio(double sales, double costOfGoodsSold)
+    public static double CalcInventoryConversionRatio(double sales, double costOfGoodsSold)
     {
         return (sales * 0.5) / costOfGoodsSold;
     }
@@ -75,7 +75,7 @@ public class FinancialFormulas
      * @param averageInventory Average Inventory
      * @return
      */
-    public double CalcInventoryTurnover(double sales, double averageInventory)
+    public static double CalcInventoryTurnover(double sales, double averageInventory)
     {
         return sales / averageInventory;
     }
@@ -86,7 +86,7 @@ public class FinancialFormulas
      * @param purchases Purchases
      * @return
      */
-    public double CalcPayablesConversionPeriod(double accountsPayable, double purchases)
+    public static double CalcPayablesConversionPeriod(double accountsPayable, double purchases)
     {
         return (accountsPayable / purchases) * 365;
     }
@@ -97,7 +97,7 @@ public class FinancialFormulas
      * @param netSales Net Sales
      * @return
      */
-    public double CalcReceivablesConversionPeriod(double receivables, double netSales)
+    public static double CalcReceivablesConversionPeriod(double receivables, double netSales)
     {
         return (receivables / netSales) * 365;
     }
@@ -108,7 +108,7 @@ public class FinancialFormulas
      * @param averageNetReceivables Average Net Receivables
      * @return
      */
-    public double CalcReceivablesTurnoverRatio(double netCreditSales, double averageNetReceivables)
+    public static double CalcReceivablesTurnoverRatio(double netCreditSales, double averageNetReceivables)
     {
         return netCreditSales / averageNetReceivables;
     }
@@ -125,7 +125,7 @@ public class FinancialFormulas
      * @param equity Equity
      * @return
      */
-    public double CalcAssets(double liabilities, double equity)
+    public static double CalcAssets(double liabilities, double equity)
     {
         return liabilities + equity;
     }
@@ -136,7 +136,7 @@ public class FinancialFormulas
      * @param operatingExpenses Operating Expenses
      * @return
      */
-    public double CalcEbit(double revenue, double operatingExpenses)
+    public static double CalcEbit(double revenue, double operatingExpenses)
     {
         return revenue - operatingExpenses;
     }
@@ -147,7 +147,7 @@ public class FinancialFormulas
      * @param liabilities Liabilities
      * @return
      */
-    public double CalcEquity(double assets, double liabilities)
+    public static double CalcEquity(double assets, double liabilities)
     {
         return assets - liabilities;
     }
@@ -158,7 +158,7 @@ public class FinancialFormulas
      * @param costOfGoodsSold Cost Of Goods Sold
      * @return
      */
-    public double CalcGrossProfit(double revenue, double costOfGoodsSold)
+    public static double CalcGrossProfit(double revenue, double costOfGoodsSold)
     {
         return revenue - costOfGoodsSold;
     }
@@ -169,7 +169,7 @@ public class FinancialFormulas
      * @param equity Equity
      * @return
      */
-    public double CalcLiabilities(double assets, double equity)
+    public static double CalcLiabilities(double assets, double equity)
     {
         return assets - equity;
     }
@@ -182,7 +182,7 @@ public class FinancialFormulas
      * @param interest Interest
      * @return
      */
-    public double CalcNetProfit(double grossProfit, double operatingExpenses, double taxes, double interest)
+    public static double CalcNetProfit(double grossProfit, double operatingExpenses, double taxes, double interest)
     {
         return grossProfit - operatingExpenses - taxes - interest;
     }
@@ -193,7 +193,7 @@ public class FinancialFormulas
      * @param operatingExpenses Operating Expenses
      * @return
      */
-    public double CalcOperatingProfit(double grossProfit, double operatingExpenses)
+    public static double CalcOperatingProfit(double grossProfit, double operatingExpenses)
     {
         return grossProfit - operatingExpenses;
     }
@@ -204,7 +204,7 @@ public class FinancialFormulas
      * @param salesOfReturnsAndAllowances Sales of Returns and Allowances
      * @return
      */
-    public double CalcSalesRevenue(double grossSales, double salesOfReturnsAndAllowances)
+    public static double CalcSalesRevenue(double grossSales, double salesOfReturnsAndAllowances)
     {
         return grossSales - salesOfReturnsAndAllowances;
     }
@@ -221,7 +221,7 @@ public class FinancialFormulas
      * @param shareholderEquity Shareholder Equity
      * @return
      */
-    public double CalcDebtEquityRatio(double totalLiabilities, double shareholderEquity)
+    public static double CalcDebtEquityRatio(double totalLiabilities, double shareholderEquity)
     {
         return totalLiabilities / shareholderEquity;
     }
@@ -232,7 +232,7 @@ public class FinancialFormulas
      * @param totalAssets Total Assets
      * @return
      */
-    public double CalcDebtRatio(double totalLiabilities, double totalAssets)
+    public static double CalcDebtRatio(double totalLiabilities, double totalAssets)
     {
         return totalLiabilities / totalAssets;
     }
@@ -243,7 +243,7 @@ public class FinancialFormulas
      * @param totalDebtService Total Debt Service
      * @return
      */
-    public double CalcDebtServiceCoverageRatio(double netOperatingIncome, double totalDebtService)
+    public static double CalcDebtServiceCoverageRatio(double netOperatingIncome, double totalDebtService)
     {
         return netOperatingIncome / totalDebtService;
     }
@@ -254,7 +254,7 @@ public class FinancialFormulas
      * @param equity Equity
      * @return
      */
-    public double CalcLongTermDebtEquityRatio(double longTermLiabilities, double equity)
+    public static double CalcLongTermDebtEquityRatio(double longTermLiabilities, double equity)
     {
         return longTermLiabilities / equity;
     }
@@ -271,7 +271,7 @@ public class FinancialFormulas
      * @param depreciation Depreciation
      * @return
      */
-    public double CalcBookValue(double acquisitionCost, double depreciation)
+    public static double CalcBookValue(double acquisitionCost, double depreciation)
     {
         return acquisitionCost - depreciation;
     }
@@ -282,7 +282,7 @@ public class FinancialFormulas
      * @param bookValueAtBeginningOfYear Book Value at Beginning of Year
      * @return
      */
-    public double CalcDecliningBalance(double depreciationRate, double bookValueAtBeginningOfYear)
+    public static double CalcDecliningBalance(double depreciationRate, double bookValueAtBeginningOfYear)
     {
         return depreciationRate * bookValueAtBeginningOfYear;
     }
@@ -295,7 +295,7 @@ public class FinancialFormulas
      * @param actualProduction Actual Production
      * @return
      */
-    public double CalcUnitsOfProduction(double costOfAsset, double residualValue, double estimatedTotalProduction, double actualProduction)
+    public static double CalcUnitsOfProduction(double costOfAsset, double residualValue, double estimatedTotalProduction, double actualProduction)
     {
         return ((costOfAsset - residualValue) / estimatedTotalProduction) * actualProduction;
     }
@@ -307,7 +307,7 @@ public class FinancialFormulas
      * @param usefulLifeOfAsset Useful Life of Asset
      * @return
      */
-    public double CalcStraightLineMethod(double costOfFixedAsset, double residualValue, double usefulLifeOfAsset)
+    public static double CalcStraightLineMethod(double costOfFixedAsset, double residualValue, double usefulLifeOfAsset)
     {
         return (costOfFixedAsset - residualValue) / usefulLifeOfAsset;
     }
@@ -325,7 +325,7 @@ public class FinancialFormulas
      * @param currentLiabilities Current Liabilities
      * @return
      */
-    public double CalcCashRatio(double cash, double marketableSecurities, double currentLiabilities)
+    public static double CalcCashRatio(double cash, double marketableSecurities, double currentLiabilities)
     {
         return (cash + marketableSecurities) / currentLiabilities;
     }
@@ -336,7 +336,7 @@ public class FinancialFormulas
      * @param currentLiabilities Current Liabilities
      * @return
      */
-    public double CalcCurrentRatio(double currentAssets, double currentLiabilities)
+    public static double CalcCurrentRatio(double currentAssets, double currentLiabilities)
     {
         return currentAssets / currentLiabilities;
     }
@@ -347,7 +347,7 @@ public class FinancialFormulas
      * @param totalDebts Total Debts
      * @return
      */
-    public double CalcOperatingCashFlowRatio(double operatingCashFlow, double totalDebts)
+    public static double CalcOperatingCashFlowRatio(double operatingCashFlow, double totalDebts)
     {
         return operatingCashFlow / totalDebts;
     }
@@ -359,7 +359,7 @@ public class FinancialFormulas
      * @param currentLiabilities Current Liabilities
      * @return
      */
-    public double CalcQuickRatio(double currentAssets, double inventories, double currentLiabilities)
+    public static double CalcQuickRatio(double currentAssets, double inventories, double currentLiabilities)
     {
         return (currentAssets - inventories) / currentLiabilities;
     }
@@ -377,7 +377,7 @@ public class FinancialFormulas
      * @param dividendsPerShare Devidends Per Share
      * @return
      */
-    public double CalcDividendCover(double earningsPerShare, double dividendsPerShare)
+    public static double CalcDividendCover(double earningsPerShare, double dividendsPerShare)
     {
         return earningsPerShare / dividendsPerShare;
     }
@@ -388,7 +388,7 @@ public class FinancialFormulas
      * @param numberOfShares Number of Shares
      * @return
      */
-    public double CalcDividendsPerShare(double dividendsPaid, double numberOfShares)
+    public static double CalcDividendsPerShare(double dividendsPaid, double numberOfShares)
     {
         return dividendsPaid / numberOfShares;
     }
@@ -399,7 +399,7 @@ public class FinancialFormulas
      * @param pricePerShare Price Per Share
      * @return
      */
-    public double CalcDividendYield(double annualDividendPerShare, double pricePerShare)
+    public static double CalcDividendYield(double annualDividendPerShare, double pricePerShare)
     {
         return annualDividendPerShare / pricePerShare;
     }
@@ -410,7 +410,7 @@ public class FinancialFormulas
      * @param numberOfShares Number of Shares
      * @return
      */
-    public double CalcEarningsPerShare(double netEarnings, double numberOfShares)
+    public static double CalcEarningsPerShare(double netEarnings, double numberOfShares)
     {
         return netEarnings / numberOfShares;
     }
@@ -421,7 +421,7 @@ public class FinancialFormulas
      * @param earnings Earnings
      * @return
      */
-    public double CalcPayoutRatio(double dividends, double earnings)
+    public static double CalcPayoutRatio(double dividends, double earnings)
     {
         return dividends / earnings;
     }
@@ -432,7 +432,7 @@ public class FinancialFormulas
      * @param annualEpsGrowth Annual EPS Growth
      * @return
      */
-    public double CalcPegRatio(double pricePerEarnings, double annualEpsGrowth)
+    public static double CalcPegRatio(double pricePerEarnings, double annualEpsGrowth)
     {
         return pricePerEarnings / annualEpsGrowth;
     }
@@ -443,7 +443,7 @@ public class FinancialFormulas
      * @param revenuePerShare Revenue Per Share
      * @return
      */
-    public double CalcPriceSalesRatio(double pricePerShare, double revenuePerShare)
+    public static double CalcPriceSalesRatio(double pricePerShare, double revenuePerShare)
     {
         return pricePerShare / revenuePerShare;
     }
@@ -460,7 +460,7 @@ public class FinancialFormulas
      * @param revenue Revenue
      * @return
      */
-    public double CalcEfficiencyRatio(double nonInterestExpense, double revenue)
+    public static double CalcEfficiencyRatio(double nonInterestExpense, double revenue)
     {
         return nonInterestExpense / revenue;
     }
@@ -471,7 +471,7 @@ public class FinancialFormulas
      * @param revenue Revenue
      * @return
      */
-    public double CalcGrossProfitMargin(double grossProfit, double revenue)
+    public static double CalcGrossProfitMargin(double grossProfit, double revenue)
     {
         return grossProfit / revenue;
     }
@@ -482,7 +482,7 @@ public class FinancialFormulas
      * @param revenue Revenue
      * @return
      */
-    public double CalcOperatingMargin(double operatingIncome, double revenue)
+    public static double CalcOperatingMargin(double operatingIncome, double revenue)
     {
         return operatingIncome / revenue;
     }
@@ -493,7 +493,7 @@ public class FinancialFormulas
      * @param revenue Revenue
      * @return
      */
-    public double CalcProfitMargin(double netProfit, double revenue)
+    public static double CalcProfitMargin(double netProfit, double revenue)
     {
         return netProfit / revenue;
     }
@@ -504,7 +504,7 @@ public class FinancialFormulas
      * @param totalAssets Total Assets
      * @return
      */
-    public double CalcReturnOnAssets(double netIncome, double totalAssets)
+    public static double CalcReturnOnAssets(double netIncome, double totalAssets)
     {
         return netIncome / totalAssets;
     }
@@ -516,7 +516,7 @@ public class FinancialFormulas
      * @param investedCapital Invested Capital
      * @return
      */
-    public double CalcReturnOnCapital(double ebit, double taxRate, double investedCapital)
+    public static double CalcReturnOnCapital(double ebit, double taxRate, double investedCapital)
     {
         return ebit * (1 - taxRate) / investedCapital;
     }
@@ -527,7 +527,7 @@ public class FinancialFormulas
      * @param averageShareholderEquity Average Shareholder Equity
      * @return
      */
-    public double CalcReturnOnEquity(double netIncome, double averageShareholderEquity)
+    public static double CalcReturnOnEquity(double netIncome, double averageShareholderEquity)
     {
         return netIncome / averageShareholderEquity;
     }
@@ -539,7 +539,7 @@ public class FinancialFormulas
      * @param workingCapital Working Capital
      * @return
      */
-    public double CalcReturnOnNetAssets(double netIncome, double fixedAssets, double workingCapital)
+    public static double CalcReturnOnNetAssets(double netIncome, double fixedAssets, double workingCapital)
     {
         return netIncome / (fixedAssets + workingCapital);
     }
@@ -550,7 +550,7 @@ public class FinancialFormulas
      * @param economicCapital Economic Capital
      * @return
      */
-    public double CalcRiskAdjustedReturnOnCapital(double expectedReturn, double economicCapital)
+    public static double CalcRiskAdjustedReturnOnCapital(double expectedReturn, double economicCapital)
     {
         return expectedReturn / economicCapital;
     }
@@ -561,7 +561,7 @@ public class FinancialFormulas
      * @param cost Cost
      * @return
      */
-    public double CalcReturnOnInvestment(double gain, double cost)
+    public static double CalcReturnOnInvestment(double gain, double cost)
     {
         return (gain - cost) / cost;
     }
@@ -573,7 +573,7 @@ public class FinancialFormulas
      * @param amortization Amortization
      * @return
      */
-    public double CalcEbitda(double ebit, double depreciation, double amortization)
+    public static double CalcEbitda(double ebit, double depreciation, double amortization)
     {
         return ebit + depreciation + amortization;
     }
