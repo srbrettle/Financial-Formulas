@@ -1,360 +1,316 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using srbrettle.FinancialFormulas;
+using Xunit;
 
-namespace FinancialFormulas.Tests
+namespace UnitTest_FinancialFormulas
 {
-    [TestClass()]
-    public class FinancialFormulasTests
-    {
-        [TestMethod()]
+    public class UnitTest_FinancialFormulas
+    {        
+        [Fact]
         public void AssetTurnover_ValidInput_ReturnsCorrect()
-        {
-            FinancialFormulas calc = new FinancialFormulas();
-            double result = calc.CalcAssetTurnover(500, 200);
-            Assert.AreEqual(2.5, result);
+        {            
+            double result = FinancialFormulas.CalcAssetTurnover(500, 200);
+            Assert.Equal(2.5, result);
         }
 
-        [TestMethod()]
+        [Fact]
         public void AverageCollectionPeriod_ValidInput_ReturnsCorrect()
         {
-            FinancialFormulas calc = new FinancialFormulas();
-            double result = calc.CalcAverageCollectionPeriod(500, 200);
-            Assert.AreEqual(912.5, result);
+            double result = FinancialFormulas.CalcAverageCollectionPeriod(500, 200);
+            Assert.Equal(912.5, result);
         }
 
-        [TestMethod()]
+        [Fact]
         public void CashConversionCycle_ValidInput_ReturnsCorrect()
         {
-            FinancialFormulas calc = new FinancialFormulas();
-            double result = calc.CalcCashConversionCycle(500, 200, 100);
-            Assert.AreEqual(600.0, result);
+            double result = FinancialFormulas.CalcCashConversionCycle(500, 200, 100);
+            Assert.Equal(600.0, result);
         }
 
-        [TestMethod()]
+        [Fact]
         public void InventoryConversionPeriod_ValidInput_ReturnsCorrect()
         {
-            FinancialFormulas calc = new FinancialFormulas();
-            double result = calc.CalcInventoryConversionPeriod(365);
-            Assert.AreEqual(1.0, result);
+            double result = FinancialFormulas.CalcInventoryConversionPeriod(365);
+            Assert.Equal(1.0, result);
         }
 
-        [TestMethod()]
+        [Fact]
         public void InventoryConversionRatio_ValidInput_ReturnsCorrect()
         {
-            FinancialFormulas calc = new FinancialFormulas();
-            double result = calc.CalcInventoryConversionRatio(500, 200);
-            Assert.AreEqual(1.25, result);
+            double result = FinancialFormulas.CalcInventoryConversionRatio(500, 200);
+            Assert.Equal(1.25, result);
         }
 
-        [TestMethod()]
+        [Fact]
         public void InventoryTurnover_ValidInput_ReturnsCorrect()
         {
-            FinancialFormulas calc = new FinancialFormulas();
-            double result = calc.CalcInventoryTurnover(500, 200);
-            Assert.AreEqual(2.5, result);
+            double result = FinancialFormulas.CalcInventoryTurnover(500, 200);
+            Assert.Equal(2.5, result);
         }
 
-        [TestMethod()]
+        [Fact]
         public void PayablesConversionPeriod_ValidInput_ReturnsCorrect()
         {
-            FinancialFormulas calc = new FinancialFormulas();
-            double result = calc.CalcPayablesConversionPeriod(500, 200);
-            Assert.AreEqual(912.5, result);
+            double result = FinancialFormulas.CalcPayablesConversionPeriod(500, 200);
+            Assert.Equal(912.5, result);
         }
 
-        [TestMethod()]
+        [Fact]
         public void ReceivablesConversionPeriod_ValidInput_ReturnsCorrect()
         {
-            FinancialFormulas calc = new FinancialFormulas();
-            double result = calc.CalcReceivablesConversionPeriod(500, 200);
-            Assert.AreEqual(912.5, result);
+            double result = FinancialFormulas.CalcReceivablesConversionPeriod(500, 200);
+            Assert.Equal(912.5, result);
         }
 
-        [TestMethod()]
+        [Fact]
         public void ReceivablesTurnoverRatio_ValidInput_ReturnsCorrect()
         {
-            FinancialFormulas calc = new FinancialFormulas();
-            double result = calc.CalcReceivablesTurnoverRatio(500, 200);
-            Assert.AreEqual(2.5, result);
+            double result = FinancialFormulas.CalcReceivablesTurnoverRatio(500, 200);
+            Assert.Equal(2.5, result);
         }
 
-        [TestMethod()]
+        [Fact]
         public void GrossProfit_ValidInput_ReturnsCorrect()
         {
-            FinancialFormulas calc = new FinancialFormulas();
-            double result = calc.CalcGrossProfit(500, 200);
-            Assert.AreEqual(300.0, result);
+            double result = FinancialFormulas.CalcGrossProfit(500, 200);
+            Assert.Equal(300.0, result);
         }
 
-        [TestMethod()]
+        [Fact]
         public void Liabilities_ValidInput_ReturnsCorrect()
         {
-            FinancialFormulas calc = new FinancialFormulas();
-            double result = calc.CalcLiabilities(500, 200);
-            Assert.AreEqual(300.0, result);
+            double result = FinancialFormulas.CalcLiabilities(500, 200);
+            Assert.Equal(300.0, result);
         }
 
-        [TestMethod()]
+        [Fact]
         public void NetProfit_ValidInput_ReturnsCorrect()
         {
-            FinancialFormulas calc = new FinancialFormulas();
-            double result = calc.CalcNetProfit(500, 200, 100, 100);
-            Assert.AreEqual(100.0, result);
+            double result = FinancialFormulas.CalcNetProfit(500, 200, 100, 100);
+            Assert.Equal(100.0, result);
         }
 
-        [TestMethod()]
+        [Fact]
         public void OperatingProfit_ValidInput_ReturnsCorrect()
         {
-            FinancialFormulas calc = new FinancialFormulas();
-            double result = calc.CalcOperatingProfit(500, 200);
-            Assert.AreEqual(300.0, result);
+            double result = FinancialFormulas.CalcOperatingProfit(500, 200);
+            Assert.Equal(300.0, result);
         }
 
-        [TestMethod()]
+        [Fact]
         public void SalesRevenue_ValidInput_ReturnsCorrect()
         {
-            FinancialFormulas calc = new FinancialFormulas();
-            double result = calc.CalcSalesRevenue(500, 200);
-            Assert.AreEqual(300.0, result);
+            double result = FinancialFormulas.CalcSalesRevenue(500, 200);
+            Assert.Equal(300.0, result);
         }
 
-        [TestMethod()]
+        [Fact]
         public void DebtEquityRatio_ValidInput_ReturnsCorrect()
         {
-            FinancialFormulas calc = new FinancialFormulas();
-            double result = calc.CalcDebtEquityRatio(500, 200);
-            Assert.AreEqual(2.5, result);
+            double result = FinancialFormulas.CalcDebtEquityRatio(500, 200);
+            Assert.Equal(2.5, result);
         }
 
-        [TestMethod()]
+        [Fact]
         public void DebtRatio_ValidInput_ReturnsCorrect()
         {
-            FinancialFormulas calc = new FinancialFormulas();
-            double result = calc.CalcDebtRatio(500, 200);
-            Assert.AreEqual(2.5, result);
+            double result = FinancialFormulas.CalcDebtRatio(500, 200);
+            Assert.Equal(2.5, result);
         }
 
-        [TestMethod()]
+        [Fact]
         public void DebtServiceCoverageRatio_ValidInput_ReturnsCorrect()
         {
-            FinancialFormulas calc = new FinancialFormulas();
-            double result = calc.CalcDebtServiceCoverageRatio(500, 200);
-            Assert.AreEqual(2.5, result);
+            double result = FinancialFormulas.CalcDebtServiceCoverageRatio(500, 200);
+            Assert.Equal(2.5, result);
         }
 
-        [TestMethod()]
+        [Fact]
         public void LongTermDebtEquityRatio_ValidInput_ReturnsCorrect()
         {
-            FinancialFormulas calc = new FinancialFormulas();
-            double result = calc.CalcLongTermDebtEquityRatio(500, 200);
-            Assert.AreEqual(2.5, result);
+            double result = FinancialFormulas.CalcLongTermDebtEquityRatio(500, 200);
+            Assert.Equal(2.5, result);
         }
 
-        [TestMethod()]
+        [Fact]
         public void BookValue_ValidInput_ReturnsCorrect()
         {
-            FinancialFormulas calc = new FinancialFormulas();
-            double result = calc.CalcBookValue(500, 200);
-            Assert.AreEqual(300.0, result);
+            double result = FinancialFormulas.CalcBookValue(500, 200);
+            Assert.Equal(300.0, result);
         }
 
-        [TestMethod()]
+        [Fact]
         public void DecliningBalance_ValidInput_ReturnsCorrect()
         {
-            FinancialFormulas calc = new FinancialFormulas();
-            double result = calc.CalcDecliningBalance(0.5, 200);
-            Assert.AreEqual(100.0, result);
+            double result = FinancialFormulas.CalcDecliningBalance(0.5, 200);
+            Assert.Equal(100.0, result);
         }
 
-        [TestMethod()]
+        [Fact]
         public void UnitsOfProduction_ValidInput_ReturnsCorrect()
         {
-            FinancialFormulas calc = new FinancialFormulas();
-            double result = calc.CalcUnitsOfProduction(500, 200, 100, 150);
-            Assert.AreEqual(450.0, result);
+            double result = FinancialFormulas.CalcUnitsOfProduction(500, 200, 100, 150);
+            Assert.Equal(450.0, result);
         }
 
-        [TestMethod()]
+        [Fact]
         public void StraightLineMethod_ValidInput_ReturnsCorrect()
         {
-            FinancialFormulas calc = new FinancialFormulas();
-            double result = calc.CalcStraightLineMethod(500, 200, 10);
-            Assert.AreEqual(30.0, result);
+            double result = FinancialFormulas.CalcStraightLineMethod(500, 200, 10);
+            Assert.Equal(30.0, result);
         }
 
-        [TestMethod()]
+        [Fact]
         public void CashRatio_ValidInput_ReturnsCorrect()
         {
-            FinancialFormulas calc = new FinancialFormulas();
-            double result = calc.CalcCashRatio(500, 200, 100);
-            Assert.AreEqual(7.0, result);
+            double result = FinancialFormulas.CalcCashRatio(500, 200, 100);
+            Assert.Equal(7.0, result);
         }
 
-        [TestMethod()]
+        [Fact]
         public void CurrentRatio_ValidInput_ReturnsCorrect()
         {
-            FinancialFormulas calc = new FinancialFormulas();
-            double result = calc.CalcCurrentRatio(500, 200);
-            Assert.AreEqual(2.5, result);
+            double result = FinancialFormulas.CalcCurrentRatio(500, 200);
+            Assert.Equal(2.5, result);
         }
 
-        [TestMethod()]
+        [Fact]
         public void OperatingCashFlowRatio_ValidInput_ReturnsCorrect()
         {
-            FinancialFormulas calc = new FinancialFormulas();
-            double result = calc.CalcOperatingCashFlowRatio(500, 200);
-            Assert.AreEqual(2.5, result);
+            double result = FinancialFormulas.CalcOperatingCashFlowRatio(500, 200);
+            Assert.Equal(2.5, result);
         }
 
-        [TestMethod()]
+        [Fact]
         public void QuickRatio_ValidInput_ReturnsCorrect()
         {
-            FinancialFormulas calc = new FinancialFormulas();
-            double result = calc.CalcQuickRatio(500, 200, 100);
-            Assert.AreEqual(3.0, result);
+            double result = FinancialFormulas.CalcQuickRatio(500, 200, 100);
+            Assert.Equal(3.0, result);
         }
 
-        [TestMethod()]
+        [Fact]
         public void DividendCover_ValidInput_ReturnsCorrect()
         {
-            FinancialFormulas calc = new FinancialFormulas();
-            double result = calc.CalcDividendCover(500, 200);
-            Assert.AreEqual(2.5, result);
+            double result = FinancialFormulas.CalcDividendCover(500, 200);
+            Assert.Equal(2.5, result);
         }
 
-        [TestMethod()]
+        [Fact]
         public void DividendsPerShare_ValidInput_ReturnsCorrect()
         {
-            FinancialFormulas calc = new FinancialFormulas();
-            double result = calc.CalcDividendsPerShare(500, 200);
-            Assert.AreEqual(2.5, result);
+            double result = FinancialFormulas.CalcDividendsPerShare(500, 200);
+            Assert.Equal(2.5, result);
         }
 
-        [TestMethod()]
+        [Fact]
         public void DividendYield_ValidInput_ReturnsCorrect()
         {
-            FinancialFormulas calc = new FinancialFormulas();
-            double result = calc.CalcDividendYield(5, 200);
-            Assert.AreEqual(0.025, result);
+            double result = FinancialFormulas.CalcDividendYield(5, 200);
+            Assert.Equal(0.025, result);
         }
 
-        [TestMethod()]
+        [Fact]
         public void EarningsPerShare_ValidInput_ReturnsCorrect()
         {
-            FinancialFormulas calc = new FinancialFormulas();
-            double result = calc.CalcEarningsPerShare(500, 200);
-            Assert.AreEqual(2.5, result);
+            double result = FinancialFormulas.CalcEarningsPerShare(500, 200);
+            Assert.Equal(2.5, result);
         }
 
-        [TestMethod()]
+        [Fact]
         public void PayoutRatio_ValidInput_ReturnsCorrect()
         {
-            FinancialFormulas calc = new FinancialFormulas();
-            double result = calc.CalcPayoutRatio(500, 10000);
-            Assert.AreEqual(0.05, result);
+            double result = FinancialFormulas.CalcPayoutRatio(500, 10000);
+            Assert.Equal(0.05, result);
         }
 
-        [TestMethod()]
+        [Fact]
         public void PegRatio_ValidInput_ReturnsCorrect()
         {
-            FinancialFormulas calc = new FinancialFormulas();
-            double result = calc.CalcPegRatio(500, 200);
-            Assert.AreEqual(2.5, result);
+            double result = FinancialFormulas.CalcPegRatio(500, 200);
+            Assert.Equal(2.5, result);
         }
 
-        [TestMethod()]
+        [Fact]
         public void PriceSalesRatio_ValidInput_ReturnsCorrect()
         {
-            FinancialFormulas calc = new FinancialFormulas();
-            double result = calc.CalcPriceSalesRatio(500, 200);
-            Assert.AreEqual(2.5, result);
+            double result = FinancialFormulas.CalcPriceSalesRatio(500, 200);
+            Assert.Equal(2.5, result);
         }
 
-        [TestMethod()]
+        [Fact]
         public void EfficiencyRatio_ValidInput_ReturnsCorrect()
         {
-            FinancialFormulas calc = new FinancialFormulas();
-            double result = calc.CalcEfficiencyRatio(500, 200);
-            Assert.AreEqual(2.5, result);
+            double result = FinancialFormulas.CalcEfficiencyRatio(500, 200);
+            Assert.Equal(2.5, result);
         }
 
-        [TestMethod()]
+        [Fact]
         public void GrossProfitMargin_ValidInput_ReturnsCorrect()
         {
-            FinancialFormulas calc = new FinancialFormulas();
-            double result = calc.CalcGrossProfitMargin(500, 200);
-            Assert.AreEqual(2.5, result);
+            double result = FinancialFormulas.CalcGrossProfitMargin(500, 200);
+            Assert.Equal(2.5, result);
         }
 
-        [TestMethod()]
+        [Fact]
         public void OperatingMargin_ValidInput_ReturnsCorrect()
         {
-            FinancialFormulas calc = new FinancialFormulas();
-            double result = calc.CalcOperatingMargin(500, 200);
-            Assert.AreEqual(2.5, result);
+            double result = FinancialFormulas.CalcOperatingMargin(500, 200);
+            Assert.Equal(2.5, result);
         }
 
-        [TestMethod()]
+        [Fact]
         public void ProfitMargin_ValidInput_ReturnsCorrect()
         {
-            FinancialFormulas calc = new FinancialFormulas();
-            double result = calc.CalcProfitMargin(500, 200);
-            Assert.AreEqual(2.5, result);
+            double result = FinancialFormulas.CalcProfitMargin(500, 200);
+            Assert.Equal(2.5, result);
         }
 
-        [TestMethod()]
+        [Fact]
         public void ReturnOnAssets_ValidInput_ReturnsCorrect()
         {
-            FinancialFormulas calc = new FinancialFormulas();
-            double result = calc.CalcReturnOnAssets(500, 200);
-            Assert.AreEqual(2.50, result);
+            double result = FinancialFormulas.CalcReturnOnAssets(500, 200);
+            Assert.Equal(2.50, result);
         }
 
-        [TestMethod()]
+        [Fact]
         public void ReturnOnCapital_ValidInput_ReturnsCorrect()
         {
-            FinancialFormulas calc = new FinancialFormulas();
-            double result = calc.CalcReturnOnCapital(500, 0.2, 100);
-            Assert.AreEqual(4.0, result);
+            double result = FinancialFormulas.CalcReturnOnCapital(500, 0.2, 100);
+            Assert.Equal(4.0, result);
         }
 
-        [TestMethod()]
+        [Fact]
         public void ReturnOnEquity_ValidInput_ReturnsCorrect()
         {
-            FinancialFormulas calc = new FinancialFormulas();
-            double result = calc.CalcReturnOnEquity(500, 200);
-            Assert.AreEqual(2.5, result);
+            double result = FinancialFormulas.CalcReturnOnEquity(500, 200);
+            Assert.Equal(2.5, result);
         }
 
-        [TestMethod()]
+        [Fact]
         public void ReturnOnNetAssets_ValidInput_ReturnsCorrect()
         {
-            FinancialFormulas calc = new FinancialFormulas();
-            double result = calc.CalcReturnOnNetAssets(500, 200, 50);
-            Assert.AreEqual(2.0, result);
+            double result = FinancialFormulas.CalcReturnOnNetAssets(500, 200, 50);
+            Assert.Equal(2.0, result);
         }
 
-        [TestMethod()]
+        [Fact]
         public void RiskAdjustedReturnOnCapital_ValidInput_ReturnsCorrect()
         {
-            FinancialFormulas calc = new FinancialFormulas();
-            double result = calc.CalcRiskAdjustedReturnOnCapital(500, 200);
-            Assert.AreEqual(2.5, result);
+            double result = FinancialFormulas.CalcRiskAdjustedReturnOnCapital(500, 200);
+            Assert.Equal(2.5, result);
         }
 
-        [TestMethod()]
+        [Fact]
         public void ReturnOnInvestment_ValidInput_ReturnsCorrect()
         {
-            FinancialFormulas calc = new FinancialFormulas();
-            double result = calc.CalcReturnOnInvestment(500, 200);
-            Assert.AreEqual(1.5, result);
+            double result = FinancialFormulas.CalcReturnOnInvestment(500, 200);
+            Assert.Equal(1.5, result);
         }
 
-        [TestMethod()]
+        [Fact]
         public void Ebitda_ValidInput_ReturnsCorrect()
         {
-            FinancialFormulas calc = new FinancialFormulas();
-            double result = calc.CalcEbitda(500, 200, 100);
-            Assert.AreEqual(800.0, result);
+            double result = FinancialFormulas.CalcEbitda(500, 200, 100);
+            Assert.Equal(800.0, result);
         }
     }
 }
