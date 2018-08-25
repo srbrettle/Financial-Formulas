@@ -69,6 +69,27 @@ namespace UnitTest_FinancialFormulas
         }
 
         [Fact]
+        public void Assets_ValidInput_ReturnsCorrect()
+        {
+            double result = FinancialFormulas.CalcAssets(300, 200);
+            Assert.Equal(500.0, result);
+        }
+
+        [Fact]
+        public void Ebit_ValidInput_ReturnsCorrect()
+        {
+            double result = FinancialFormulas.CalcEbit(500, 200);
+            Assert.Equal(300.0, result);
+        }
+
+        [Fact]
+        public void Equity_ValidInput_ReturnsCorrect()
+        {
+            double result = FinancialFormulas.CalcEquity(300, 200);
+            Assert.Equal(100.0, result);
+        }
+
+        [Fact]
         public void GrossProfit_ValidInput_ReturnsCorrect()
         {
             double result = FinancialFormulas.CalcGrossProfit(500, 200);
