@@ -38,7 +38,7 @@ double result = FinancialFormulas.CalcPriceSalesRatio(500,200);
 
 ### Manually
 
-1. Download and import [this](/main/csharp/) library into your project:
+1. Download and import [this](/main/csharp/) library into your project.
 
 
 
