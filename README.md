@@ -39,9 +39,9 @@ double result = FinancialFormulas.CalcPriceSalesRatio(500,200);
 ### Manually
 
 1. Download and import [this](/main/csharp/) library into your project:
-```c#
-using srbrettle.FinancialFormulas;
-```
+
+
+
 2. Reference the Namespace:
 ```c#
 using srbrettle.FinancialFormulas;
