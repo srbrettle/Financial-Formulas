@@ -12,8 +12,6 @@ A collection of methods for solving Finance/Accounting equations, implemented in
 ```java
 import srbrettle.financialformulas.FinancialFormulas;
 ```
-
-
 2. Use the library methods:
 ```java
 double result = FinancialFormulas.CalcPriceSalesRatio(500,200);
@@ -39,9 +37,6 @@ double result = FinancialFormulas.CalcPriceSalesRatio(500,200);
 ### Manually
 
 1. Download and import [this](/main/csharp/) library into your project.
-
-
-
 2. Reference the Namespace:
 ```c#
 using srbrettle.FinancialFormulas;
