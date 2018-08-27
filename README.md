@@ -12,13 +12,11 @@ A collection of methods for solving Finance/Accounting equations, implemented in
 ```java
 import srbrettle.financialformulas.FinancialFormulas;
 ```
-2. Create an instance of the class: 
+
+
+2. Use the library methods:
 ```java
-FinancialFormulas calc = new FinancialFormulas();
-```
-3. Use the library methods:
-```java
-double result = calc.CalcPriceSalesRatio(500,200);
+double result = FinancialFormulas.CalcPriceSalesRatio(500,200);
 ```
 
 ## Getting Started - C#
