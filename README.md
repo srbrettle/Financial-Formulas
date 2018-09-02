@@ -17,7 +17,7 @@ import srbrettle.financialformulas.FinancialFormulas;
 double result = FinancialFormulas.CalcPriceSalesRatio(500,200);
 ```
 
-## Getting Started - C#
+## Getting Started - C# [Deprecated - New GitHub Repo](https://github.com/srbrettle/Financial-Formulas-API-.NET-Core/tree/master)
 
 ### Using NuGet [![NuGet](https://img.shields.io/badge/NuGet-1.0.2-blue.svg)](https://www.nuget.org/packages/FinancialFormulas/1.0.2)
 
